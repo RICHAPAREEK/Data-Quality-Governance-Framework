@@ -1,6 +1,6 @@
 # Data Quality & Governance Framework
 ## RBI Scheduled Commercial Banks — NPA Dataset
-**Source:** [data.gov.in](https://www.data.gov.in) | Ministry of Finance / Reserve Bank of India  
+**Source:**  Ministry of Finance / Reserve Bank of India  
 **Tools:** SQL (SQLite) · Excel · DB Browser for SQLite  
 **Domain:** Banking & Financial Risk | Data Governance
 
@@ -24,19 +24,16 @@ The project covers the full governance lifecycle:
 
 | Dataset | Source | Rows | Columns |
 |---|---|---|---|
-| Bank-wise NPA Written-off (2019–2025) | data.gov.in — Rajya Sabha Session 267 | 79 | 8 |
-| Bank-wise NPA Recovery (2019–2025) | data.gov.in — Rajya Sabha Session 266 | 18 | 8 |
+| Bank-wise NPA Written-off (2019–2025) | Rajya Sabha Session 267 | 79 | 8 |
+| Bank-wise NPA Recovery (2019–2025) | Rajya Sabha Session 266 | 18 | 8 |
 
-**Direct links:**
-- [NPA Written-off dataset](https://www.data.gov.in/resource/bank-wise-details-non-performing-assets-npa-written-scheduled-commercial-banks-2019-20)
-- [NPA Recovery dataset](https://www.data.gov.in/resource/bank-wise-details-recovery-non-performing-assets-npas-public-sector-banks-2019-20-2024-25)
 
 ---
 
 ## Data Lineage
 
 ```
-data.gov.in (RBI / Ministry of Finance)
+(RBI / Ministry of Finance)
         │
         ▼
 npa_writtenoff.csv (79 rows)    npa_recovery.csv (18 rows)
@@ -97,7 +94,7 @@ npa_writtenoff.csv (79 rows)    npa_recovery.csv (18 rows)
 
 ---
 
-## Star Finding — Critical Business Rule Violation (DQ-009)
+##  Finding — Critical Business Rule Violation (DQ-009)
 
 4 major Public Sector Banks show recovery amounts **exceeding** written-off NPA — which is logically impossible under standard NPA accounting:
 
